@@ -1,0 +1,8 @@
+local cat = Instance.new("Part")
+
+cat.BrickColor = BrickColor.new("Really black")
+cat.Shape = Enum.PartType.Block
+cat.Size = Vector3.new(10, 10, 10)
+cat.Anchored = true
+cat.CanCollide = true
+cat.Parent = workspace

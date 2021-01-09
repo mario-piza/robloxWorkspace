@@ -1,5 +1,5 @@
 -- This script uses my hitbox system to explode some humanoids.
--- The hitbox system gets adjusted depending on its use.
+-- The hitbox system must be adjusted depending on its use.
 
 
 local hitbox = script.Parent

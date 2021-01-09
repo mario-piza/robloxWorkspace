@@ -1,0 +1,36 @@
+-- This script uses my hitbox system to explode some humanoids.
+-- The hitbox system gets adjusted depending on its use.
+
+
+local hitbox = script.Parent
+
+local connection = hitbox.Touched:Connect(function()end)
+local results = hitbox:GetTouchingParts()
+connection:Disconnect()
+
+function getHumanoid()
+	
+	local cd = false
+	
+	for _, v in pairs (results) do
+
+		local targhum
+
+		if v ~= nil and v:IsDescendantOf(workspace) then
+			targhum = v.Parent:FindFirstChild("Humanoid")
+		end
+		
+		if (cd == false) then
+				print(targhum)
+				local explosion = Instance.new("Explosion")
+			explosion.Parent = targhum
+			explosion.Position = targhum.Parent.Head.Position
+				
+			end
+	
+	end
+	
+end
+
+
+getHumanoid()
